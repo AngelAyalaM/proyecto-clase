@@ -16,11 +16,11 @@
 		<p:growl id="msgs" />
 		<div align="center">
 			<h:panelGrid columns="1">
-				<p:panel header="Crear Categorias" style="margin-bottom:20px">
+				<p:panel header="Crear Cita" style="margin-bottom:20px">
 
 					<h:panelGrid columns="2" cellpadding="5">
 
-						<h:outputLabel value="Codigo :" for="txt_codigo"></h:outputLabel>
+						<h:outputLabel value="ID :" for="txt_codigo"></h:outputLabel>
 						<p:inputText id="txt_codigo"
 							value="#{mantenimientoCategorias.categoria.codigo}"
 							required="true" />
@@ -30,7 +30,7 @@
 							value="#{mantenimientoCategorias.categoria.nombre}"
 							required="true" />
 
-						<h:outputLabel value="Descripcion :" for="txt_descripcion"></h:outputLabel>
+						<h:outputLabel value="Correo electronico :" for="txt_descripcion"></h:outputLabel>
 						<p:inputText id="txt_descripcion"
 							value="#{mantenimientoCategorias.categoria.descripcion}"
 							required="true" />
@@ -54,7 +54,7 @@
 			<p:dataTable value="#{mantenimientoCategorias.categorias}"
 				var="categoria" id="categoriasTable" >
 
-				<p:column headerText="Codigo">
+				<p:column headerText="ID">
 					<h:outputText value="#{categoria.codigo}" />
 				</p:column>
 
@@ -65,7 +65,7 @@
 					<h:outputText value="#{categoria.nombre}" />
 				</p:column>
 
-				<p:column headerText="Descripcion">
+				<p:column headerText="Correo electronico">
 					<f:facet name="header">
 						<h:outputText value="Descripcion" />
 					</f:facet>
